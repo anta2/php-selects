@@ -1,0 +1,12 @@
+1_SELECT nom, nomobs FROM Obstacle O, NiveauDifficulte N WHERE O.idniv = N.idnv;
+
+2_SELECT nomobs,notemin,note,bonus, (note+bonus) AS notefinal FROM Passer,Soldat,Participation,Obstacle,NiveauDifficulte WHERE Obstacle.idniv=NiveauDifficulte.idnv && Passer.idobstacle=Obstacle.idobstacle && Passer.idinst=Soldat.idsoldat && Participation.idpart=Passer.idpart && (note+bonus) 
+
+3_SELECT nomobs,notemin,note,bonus, (note+bonus) AS notefinal FROM Passer,Soldat,Participation,Obstacle,NiveauDifficulte WHERE Obstacle.idniv=NiveauDifficulte.idnv && Passer.idobstacle=Obstacle.idobstacle && Passer.idinst=Soldat.idsoldat && Participation.idpart=Passer.idpart && (note+bonus) <10
+
+4_SELECT nomobs,notemin,note,bonus, (note+bonus) AS notefinal FROM Passer,Soldat,Participation,Obstacle,NiveauDifficulte WHERE Obstacle.idniv=NiveauDifficulte.idnv && Passer.idobstacle=Obstacle.idobstacle && Passer.idinst=Soldat.idsoldat && Participation.idpart=Passer.idpart && (note+bonus) =0
+
+5_SELECT nomobs,notemin,note,bonus, (note+bonus) AS notefinal FROM Passer,Soldat,Participation,Obstacle,NiveauDifficulte WHERE Obstacle.idniv=NiveauDifficulte.idnv && Passer.idobstacle=Obstacle.idobstacle && Passer.idinst=Soldat.idsoldat && Participation.idpart=Passer.idpart && (note+bonus) =10
+
+6_SELECT nomobs,notemin,note,bonus, (note+bonus) AS notefinal FROM Passer,Soldat,Participation,Obstacle,NiveauDifficulte WHERE Obstacle.idniv=NiveauDifficulte.idnv && Passer.idobstacle=Obstacle.idobstacle && Passer.idinst=Soldat.idsoldat && Participation.idpart=Passer.idpart && (note+bonus)>notemin 
+
